@@ -50,7 +50,7 @@ function Contact() {
             ></textarea>
           </div>
           <button
-            type="submit"
+            type="button"
             className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-300"
           >
             Send Message

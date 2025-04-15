@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <>
+    <div className="container mx-auto w-[80vw]">
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -16,7 +16,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

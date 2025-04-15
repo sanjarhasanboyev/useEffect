@@ -1,21 +1,6 @@
 import { useEffect, useState } from "react";
 
 function Home() {
-
-  // mounting
-  // updating
-
-  // const [count, setCount] = useState(0);
-  // const [api, setApi] = useState(0);
-
-  // useEffect(() => {
-  //   console.log("counter");
-  // }, [])
-
-  // useEffect(() => {
-  //   console.log("serverdan 1gb lik narsa olinyabdi...");
-  // }, [api])
-
   useEffect(() => {
     const interval = setInterval(() => {
       console.log("Home component hali ham ishlayabdi");
@@ -23,8 +8,9 @@ function Home() {
 
     return () => {
       clearInterval(interval);
+      console.log("Home component da timer to'xtatildi");
     };
-  }, []); 
+  }, []);
 
   return (
     <div className="container mx-auto py-10 px-4">
@@ -42,11 +28,6 @@ function Home() {
           className="mt-6 rounded-lg shadow-lg mx-auto"
         />
       </div>
-      {/* <h1 className="text-4xl">{count}</h1>
-      <button onClick={() => setCount(count + 1)} className="border rounded px-5 py-2 cursor-pointer">Oshirish</button>
-      <hr />
-      <h1 className="text-4xl">{api}</h1>
-      <button onClick={() => setApi(api + 1)} className="border rounded px-5 py-2 cursor-pointer">API olish</button> */}
     </div>
   );
 }
