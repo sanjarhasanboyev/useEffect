@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
-import Card from "../components/Card";
+import { useEffect } from "react";
 
-function Home({theme}) {
+function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       console.log("Home component hali ham ishlayabdi");
@@ -28,7 +27,6 @@ function Home({theme}) {
           alt="Home"
           className="mt-6 rounded-lg shadow-lg mx-auto"
         />
-        <Card theme={theme}/>
       </div>
     </div>
   );

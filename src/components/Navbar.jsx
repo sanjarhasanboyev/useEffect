@@ -1,11 +1,13 @@
 import { NavLink } from "react-router-dom";
 import "../App.css";
 import { FaMoon, FaSun } from "react-icons/fa";
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeProvider";
 
-function Navbar({theme, toggleTheme}) {
-
+function Navbar() {
+  const {theme, toggleTheme} = useContext(ThemeContext)
   return (
-    <div className={`flex justify-between transition-colors duration-200 items-center py-2 ${theme === 'light' ? 'bg-gray-700 text-amber-50' : ''}`}>
+    <div className={`flex justify-between transition-colors duration-200 items-center py-2  ${theme === 'light' ? 'bg-gray-700 text-amber-50' : ''}`}>
       <h1 className="text-2xl font-bold">Logo there</h1>
       <ul className="flex items-center gap-8">
         <li>
