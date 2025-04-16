@@ -1,6 +1,6 @@
-function Card() {
+function Card({theme}) {
   return (
-    <div className="flex gap-5 mt-3 border p-3">
+    <div className= {`flex gap-5 mt-3 border p-3 ${theme === 'light' ? 'bg-gray-700 text-amber-50' : ''}`}>
       <div className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white hover:shadow-2xl transition-shadow duration-300">
         <img
           className="w-full h-48 object-cover"
