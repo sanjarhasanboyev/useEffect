@@ -17,6 +17,9 @@ function Navbar() {
         <li>
           <NavLink to="/contact">Contact</NavLink>
         </li>
+        <li>
+          <NavLink to="/products">Products</NavLink>
+        </li>
       </ul>
 
       <button className="border rounded px-7 py-1 cursor-pointer">
