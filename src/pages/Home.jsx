@@ -1,13 +1,15 @@
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeProvider";
 
 function Home() {
-
+  const {theme} = useContext(ThemeContext);
   return (
-    <div className="container mx-auto py-10 px-4">
+    <div className={`container mx-auto py-10 px-4 ${theme === 'light' ? 'bg-gray-700 text-amber-50' : ''}`}>
       <div className="text-center">
-        <h2 className="text-4xl font-bold text-gray-800 mb-4">
+        <h2 className="text-4xl font-bold mb-4">
           Welcome to Home
         </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="text-lg max-w-2xl mx-auto">
           This is the homepage of our application. Explore our website to learn
           more about us and get in touch!
         </p>

@@ -2,10 +2,17 @@ import { NavLink } from "react-router-dom";
 import "../App.css";
 import { CiLight } from "react-icons/ci";
 import { MdDarkMode } from "react-icons/md";
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeProvider";
 
 function Navbar() {
+  const { theme, toggleTheme } = useContext(ThemeContext);
   return (
-    <div className={`flex justify-between items-center py-2`}>
+    <div
+      className={`flex justify-between items-center py-2 ${
+        theme === "light" ? "bg-gray-700 text-amber-50" : ""
+      } `}
+    >
       <h1 className="text-2xl font-bold">Logo there</h1>
       <ul className="flex items-center gap-8">
         <li>
@@ -19,8 +26,11 @@ function Navbar() {
         </li>
       </ul>
 
-      <button className="border rounded px-7 py-1 cursor-pointer">
-        Dark mode
+      <button
+        onClick={toggleTheme}
+        className="border rounded px-7 py-1 cursor-pointer"
+      >
+        {theme === "light" ? <MdDarkMode /> : <CiLight />}
       </button>
     </div>
   );
