@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeProvider";
+import { useTranslation } from "react-i18next";
 
 function About() {
   const { theme } = useContext(ThemeContext);
-    
+   const {t} = useTranslation();
   return (
     <div
       className={`container mt-2 mx-auto py-10 px-4  ${
@@ -11,12 +12,8 @@ function About() {
       }`}
     >
       <div className="text-center">
-        <h2 className="text-4xl font-bold  mb-4">About Us</h2>
-        <p className="text-lg max-w-2xl mx-auto">
-          We are a passionate team dedicated to building amazing web
-          applications. Our mission is to deliver high-quality solutions that
-          make a difference.
-        </p>
+        <h2 className="text-4xl font-bold  mb-4">{t("about_title")}</h2>
+        <p className="text-lg max-w-2xl mx-auto">{t("about_description")}</p>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold text-gray-800">Our Vision</h3>

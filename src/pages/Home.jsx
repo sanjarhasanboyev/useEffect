@@ -1,16 +1,16 @@
 import { useEffect } from "react";
 
 function Home() {
-  useEffect(() => {
-    const interval = setInterval(() => {
-      console.log("Home component hali ham ishlayabdi");
-    }, 1000);
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       console.log("Home component hali ham ishlayabdi");
+//     }, 1000);
 
-    return () => {
-      clearInterval(interval);
-      console.log("Home component da timer to'xtatildi");
-    };
-  }, []);
+//     return () => {
+//       clearInterval(interval);
+//       console.log("Home component da timer to'xtatildi");
+//     };
+//   }, []);
 
   return (
     <div className="container mx-auto py-10 px-4">
