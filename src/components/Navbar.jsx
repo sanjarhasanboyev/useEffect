@@ -26,12 +26,18 @@ function Navbar() {
         </li>
       </ul>
 
-      <button
-        onClick={toggleTheme}
-        className="border rounded px-7 py-1 cursor-pointer"
-      >
-        {theme === "light" ? <MdDarkMode /> : <CiLight />}
-      </button>
+      <div>
+        <select>
+          <option value="uz">Uz</option>
+          <option value="en">Eng</option>
+        </select>
+        <button
+          onClick={toggleTheme}
+          className="border rounded px-7 py-1 cursor-pointer"
+        >
+          {theme === "light" ? <MdDarkMode /> : <CiLight />}
+        </button>
+      </div>
     </div>
   );
 }

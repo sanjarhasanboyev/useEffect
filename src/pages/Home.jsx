@@ -4,7 +4,7 @@ import { ThemeContext } from "../context/ThemeProvider";
 function Home() {
   const {theme} = useContext(ThemeContext);
   return (
-    <div className={`container mx-auto py-10 px-4 ${theme === 'light' ? 'bg-gray-700 text-amber-50' : ''}`}>
+    <div className={`mt-2 container mx-auto py-10 px-4 ${theme === 'light' ? 'bg-gray-700 text-amber-50' : ''}`}>
       <div className="text-center">
         <h2 className="text-4xl font-bold mb-4">
           Welcome to Home
